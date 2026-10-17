@@ -1,0 +1,15 @@
+{
+    "memories": [
+        {
+            "id": "a24240eec8897d56",
+            "title": "TEST ADMIN",
+            "comment": "I love you.",
+            "image": "uploads/memories/f7952c89f3b552452ec69e9539f85f74.jpg",
+            "category": "Beloved",
+            "favorite": false,
+            "memory_date": "2026-10-17",
+            "created_at": "2026-10-17T12:40:40Z",
+            "updated_at": "2026-10-17T12:40:40Z"
+        }
+    ]
+}

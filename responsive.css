@@ -1,0 +1,35 @@
+@media (max-width: 960px) {
+  .dialog-viewer[open] { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; }
+  .viewer-info { border-left: 0; border-top: 1px solid var(--border); padding-top: 18px; max-height: 42dvh; padding-bottom: calc(var(--safe-bottom) + 18px); }
+  .viewer-stage img { max-height: calc(100dvh - 42dvh - 40px); }
+  .viewer-next { right: 14px; }
+  .viewer-nav { top: 38%; }
+}
+
+@media (max-width: 720px) {
+  .toolbar { flex-direction: column; align-items: stretch; }
+  .filters { display: grid; grid-template-columns: 1fr; }
+  .field-search, .field-select { width: 100%; min-width: 0; }
+  .topbar .btn-primary { padding-inline: 16px; }
+
+  /* Horizontal swipe rail with scroll snapping */
+  .cards { display: flex; gap: 14px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-inline: calc(var(--gutter) * -1); padding: 4px var(--gutter) 24px; }
+  .cards::-webkit-scrollbar { display: none; }
+  .card { flex: 0 0 min(80vw, 340px); scroll-snap-align: center; }
+  .card:hover .card-media img { transform: none; }
+
+  .dialog { width: 94vw; padding: 20px; border-radius: 24px; }
+  .editor-grid { grid-template-columns: 1fr; gap: 16px; }
+  .dropzone { aspect-ratio: 4 / 3; max-height: 34dvh; }
+  .dialog-foot .btn { flex: 1; }
+  .field, textarea.field { font-size: 16px; } /* avoids iOS zoom on focus */
+}
+
+@media (max-width: 380px) {
+  .form-split { grid-template-columns: 1fr; }
+  .wordmark { font-size: 1.15rem; }
+}
+
+@media (hover: none) {
+  .card:hover { background: var(--bg-2); border-color: var(--border); }
+}

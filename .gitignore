@@ -1,0 +1,14 @@
+/config/secrets.php
+/data/memories.json
+/data/memories.json.bak
+/data/pending-deletes.json
+/data/ratelimit.json
+/data/.lock
+/data/*.tmp*
+/uploads/memories/*
+!/uploads/memories/.gitkeep
+/database-backups/*
+!/database-backups/.gitkeep
+*.log
+*.tmp
+.env

@@ -1,0 +1,45 @@
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fade-out { to { opacity: 0; } }
+@keyframes pop-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@keyframes dialog-in { from { opacity: 0; transform: translateY(14px) scale(0.985); } to { opacity: 1; transform: none; } }
+@keyframes dialog-out { to { opacity: 0; transform: translateY(10px) scale(0.985); } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes toast-out { to { opacity: 0; transform: translateY(6px); } }
+@keyframes card-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes card-out { to { opacity: 0; transform: scale(0.94) translateY(8px); } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(2px); } }
+@keyframes letter-in { from { opacity: 0; transform: translateY(0.35em); } to { opacity: 1; transform: none; } }
+@keyframes rise-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+.dialog[open] { animation: dialog-in var(--t-modal) var(--ease); }
+.dialog[open]::backdrop { animation: fade-in var(--t-modal) var(--ease); }
+.dialog.is-closing { animation: dialog-out 200ms var(--ease) forwards; }
+.dialog.is-closing::backdrop { animation: fade-out 200ms var(--ease) forwards; }
+.dialog-viewer[open] { animation: fade-in var(--t-modal) var(--ease); }
+.dialog-viewer.is-closing { animation: fade-out 200ms forwards; }
+.shake { animation: shake 380ms var(--ease); }
+
+.card.is-entering { opacity: 0; animation: card-in 420ms var(--ease) forwards; animation-delay: calc(var(--i, 0) * 45ms); }
+.card.is-removing { animation: card-out 300ms var(--ease) forwards; pointer-events: none; }
+
+.login.is-leaving { animation: fade-out 450ms var(--ease) forwards; pointer-events: none; }
+.login.is-entering { animation: fade-in 500ms var(--ease) both; }
+.intro-brand .ch { display: inline-block; opacity: 0; animation: letter-in var(--t-intro) var(--ease) forwards; animation-delay: calc(var(--n) * 90ms + 200ms); }
+.intro.is-leaving { animation: fade-out 500ms var(--ease) forwards; pointer-events: none; }
+.intro-brand.is-away { animation: fade-out 450ms var(--ease) forwards; }
+.intro-continue.is-in .intro-message { animation: rise-in var(--t-intro) var(--ease) both; }
+.intro-continue.is-in .intro-hint { animation: rise-in var(--t-intro) var(--ease) 350ms both; }
+.intro-hint { padding: 10px 18px; border-radius: 999px; color: var(--text-2); font-size: 0.9375rem; transition: color var(--t-micro), background var(--t-micro), transform var(--t-micro); }
+.intro-hint:hover { color: var(--text); background: var(--hover); }
+.intro-hint:active { transform: scale(0.97); }
+
+.app { opacity: 0; transform: translateY(16px); transition: opacity 600ms var(--ease), transform 600ms var(--ease); }
+.app.is-visible { opacity: 1; transform: none; }
+.app.is-leaving { opacity: 0; transform: translateY(8px); transition-duration: 380ms; }
+.hero.reveal > * { animation: rise-in 700ms var(--ease) both; }
+.hero.reveal > .hero-sub { animation-delay: 120ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; scroll-behavior: auto !important; }
+  .intro-brand .ch, .card.is-entering { opacity: 1; }
+}

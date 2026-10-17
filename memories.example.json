@@ -1,0 +1,15 @@
+{
+  "memories": [
+    {
+      "id": "0123456789abcdef",
+      "title": "A Moment to Remember",
+      "comment": "Example only. Real records are created by the website.",
+      "image": "uploads/memories/0123456789abcdef0123456789abcdef.jpg",
+      "category": "Memories",
+      "favorite": false,
+      "memory_date": "2026-10-17",
+      "created_at": "2026-10-17T10:00:00Z",
+      "updated_at": "2026-10-17T10:00:00Z"
+    }
+  ]
+}

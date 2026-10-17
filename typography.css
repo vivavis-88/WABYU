@@ -1,0 +1,10 @@
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.6; color: var(--text); font-weight: 400; }
+h1, h2, h3, .wordmark, .login-brand, .intro-brand, .intro-message { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.01em; line-height: 1.15; }
+.wordmark { font-size: 1.35rem; font-weight: 600; letter-spacing: 0.12em; }
+.hero-title { font-size: clamp(1.9rem, 5.2vw, 3.5rem); font-weight: 300; max-width: 18ch; }
+.hero-sub { margin-top: 1rem; color: var(--text-2); font-size: clamp(0.95rem, 1.6vw, 1.1rem); max-width: 52ch; }
+.dialog-title { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 400; }
+.viewer-title { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 400; }
+.viewer-comment, .card-comment { color: var(--text-2); line-height: 1.7; }
+.muted, .field-hint, .card-meta, .viewer-meta { color: var(--text-3); font-size: 0.8125rem; }
+label { font-size: 0.875rem; font-weight: 500; color: var(--text-2); }
